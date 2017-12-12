@@ -1,0 +1,98 @@
+/*
+Theme Name: Start WordPress
+Author: Dennis Borghoff
+Description:
+Version: 0.0.1
+Tags:
+*/
+
+/* =======================================
+  Reset
+ =======================================*/
+/* TODO: Reset auslagern in reset.css */
+body {
+  margin: 0;
+}
+/* =======================================
+Site Container
+ =======================================*/
+.site-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-areas:
+  "header header"
+  "sidebar content"
+  "footer footer"
+}
+/* =======================================
+  Header
+======================================= */
+/* Navigation */
+.header-container {
+  padding:1rem;
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color:white;
+}
+.blog-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+.blog-nav li {
+  margin-left: 0.5rem;
+}
+.blog-nav li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+.blog-nav li a:hover{
+  color: grey;
+}
+/* Blogheader */
+.blogheader-container h1 a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+/* =======================================
+  Content and Sidebar
+ =======================================*/
+.content-container {
+  padding:1rem;
+  grid-area: content;
+}
+.sidebar-container {
+  padding:1rem;
+  grid-area: sidebar;
+}
+.sidebar-list {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+/* =======================================
+  Footer
+ =======================================*/
+.footer-container {
+  padding:1rem;
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Navigation*/
+.footer-nav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
